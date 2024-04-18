@@ -73,4 +73,5 @@ Artık uygulamayı kullanmaya başlayabilirsiniz. Tarayıcınızdan `http://loca
 ## Ekran Görüntüleri
 
 ![Ekran Görüntüsü 1](screenshots/sc1.png)
+
 ![Ekran Görüntüsü 2](screenshots/sc2.png)
