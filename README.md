@@ -23,7 +23,7 @@ Arkadaş grubunuzla birbirinize olan borçlarınızı takip etmek için gelişti
 - Admin paneli
 - IBAN kopyalama
 
-# Gereksinimler
+## Gereksinimler
 
 - Node.js
 - MySQL Server
@@ -72,5 +72,5 @@ Artık uygulamayı kullanmaya başlayabilirsiniz. Tarayıcınızdan `http://loca
 
 ## Ekran Görüntüleri
 
-[Ekran Görüntüsü 1](screenshots/sc1.png)
-[Ekran Görüntüsü 2](screenshots/sc2.png)
+![Ekran Görüntüsü 1](screenshots/sc1.png)
+![Ekran Görüntüsü 2](screenshots/sc2.png)
