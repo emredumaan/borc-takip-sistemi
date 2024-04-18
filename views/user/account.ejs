@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("../partials/head")  %>
+<body>
+    <div class="container account">
+        <div class="user">
+            <div class="info">
+                <span class="material-symbols-rounded">person</span>
+                <span class="name"><%= user.name %></span>
+            </div>
+            <div class="action-buttons">
+                <button id="change-password" class="btn primary">
+                    <span class="material-symbols-rounded">lock_open</span>
+                    <span>Parola değiştir</span>
+                </button>
+                <button id="logout" class="btn danger">
+                    <span class="material-symbols-rounded">logout</span>
+                    <span>Çıkış yap</span>
+                </button>
+            </div>
+        </div>
+        <div class="requests-wrapper">
+            <span class="section-title">Gelen Talepler</span>
+            <div class="requests">
+                <% if(debtRequests.length > 0) { %>
+                    <% debtRequests.forEach(debt => { %>
+                        <% if(debt.status === 'pending') { %>
+                            <div id="<%= debt.id %>" class="request debt-r">
+                                <b><%= roommates.find(mate=> mate.id === debt.lenderId).name %></b> sana
+                                <b><%= debt.amount %>₺</b> borç verdi mi?
+                            </div>
+                        <% } %>
+                        <% if(debt.status === 'pay_pending') { %>
+                            <div id="<%= debt.id %>" class="request delete-r">
+                            <b><%= roommates.find(mate=> mate.id === debt.debtorId).name %></b> sana olan
+                            <b><%= debt.amount %>₺</b> borcunu ödedi mi?
+                        </div>
+                        <% } %>
+                    <% }) %>
+                <% } else { %>
+                    <div class="empty-list">
+                        <span class="material-symbols-rounded">
+                            contract
+                        </span>
+                        <span>Hiç kayıt bulunamadı</span>
+                    </div>
+                <% } %>
+            </div>
+        </div>
+    </div>
+    <%- include("../partials/bottom-nav")  %>
+    <%- include("../partials/add-debt") %>
+    <script src="/js/main.js"></script>
+    <script src="/js/account.js"></script>
+</body>
+</html>

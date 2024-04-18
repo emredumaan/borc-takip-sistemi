@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "undefined/subscriptions/b970017b-9714-4499-88ea-f0f0d37cd3bd/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/borc-sorgu",
+    "appService.deploySubpath": "."
+}

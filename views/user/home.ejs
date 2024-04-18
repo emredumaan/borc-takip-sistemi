@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("../partials/head") %>
+
+    <body>
+        <div class="container home">
+            <header class="top-bar">
+                <div class="tabs">
+                    <span id="debtor-tab" data-window="debtor-home" class="tab active">Vereceklerim</span>
+                    <span id="lender-tab" data-window="lender-home" class="tab ">Alacaklarım</span>
+                </div>
+                <div class="filter">
+                    <div class="feature-title">
+                        <span class="material-symbols-rounded">list</span>
+                        <span>Listele</span>
+                    </div>
+                    <div class="custom-select">
+                        <select id="org-filter-select">
+                            <option value="all">Tümü</option>
+                            <% roommates.forEach(mate=> { %>
+                                <option value=<%=mate.id %>><%= mate.name %>
+                                </option>
+                                <% }) %>
+                        </select>
+                    </div>
+                </div>
+            </header>
+            <div class="windows">
+                <div class="window debtor-home active">
+                    <% if (debts.length> 0) { %>
+                        <% debts.forEach(debt=> { %>
+                            <div class="debt<%= debt.status === 'pay_pending' ? ' pending' : '' %>" id="<%= debt.id %>"
+                                data-user="<%= roommates.find(mate=> mate.id === debt.lenderId).id %>">
+                                <span class="name">
+                                    <%= roommates.find(mate=> mate.id === debt.lenderId).name %>
+                                </span>
+                                <span class="amount">
+                                    <%= debt.amount %> ₺
+                                </span>
+                            </div>
+                            <% }) %>
+                                <% } else {%>
+                                    <div class="empty-list">
+                                        <span class="material-symbols-rounded">
+                                            contract
+                                        </span>
+                                        <span>Hiç kayıt bulunamadı</span>
+                                    </div>
+                                    <% } %>
+
+                </div>
+                <div class="window lender-home">
+                    <% if (lents.length> 0) { %>
+                        <% lents.forEach(lent=> { %>
+                            <div class="lent" id="<%= lent.id %>"
+                                data-user="<%= roommates.find(mate=> mate.id === lent.debtorId).id %>">
+                                <span class="name">
+                                    <%= roommates.find(mate=> mate.id === lent.debtorId).name %>
+                                </span>
+                                <span class="amount">
+                                    <%= lent.amount %> ₺
+                                </span>
+                            </div>
+                            <% }) %>
+                                <% } else {%>
+                                    <div class="empty-list">
+                                        <span class="material-symbols-rounded">
+                                            contract
+                                        </span>
+                                        <span>Hiç kayıt bulunamadı</span>
+                                    </div>
+                                    <% } %>
+                </div>
+            </div>
+        </div>
+
+        <%- include("../partials/bottom-nav") %>
+        <%- include("../partials/add-debt") %>
+
+        <script src="/js/main.js"></script>
+        <script src="/js/home.js"></script>
+    </body>
+</html>

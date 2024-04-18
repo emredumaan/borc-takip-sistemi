@@ -1,0 +1,60 @@
+<div class="debt-drawer">
+    <div class="head">
+        <span class="title">Borç Ekle</span>
+        <span class="material-symbols-rounded close">
+            close
+        </span>
+    </div>
+    <div class="tabs">
+        <span id="lender-tab" data-window="lender" class="tab active">Alacak</span>
+        <span id="debtor-tab" data-window="debtor" class="tab">Verecek</span>
+    </div>
+    <div class="windows">
+        <div class="window lender active">
+            <form id="lender-form">
+                <p class="window-text">Kimin sana borcu var?</p>
+                <div class="roommates">
+                    <% roommates.forEach(mate=> { %>
+                        <span class="mate" data-id="<%= mate.id %>">
+                            <%= mate.name %>
+                        </span>
+                        <% }) %>
+                </div>
+                <p class="window-text">Borç miktarı:</p>
+                <div class="amount-wrapper">
+                    <input class="amount" type="number" name="amount" step="0.01" id="amount" min="0.1" max="999999999">
+                    <span class="currency">₺</span>
+                </div>
+                <button class="submit" type="submit">
+                    <span class="material-symbols-rounded" style="font-size: 2rem;">
+                        add_task
+                    </span>
+                    Borcu ekle
+                </button>
+            </form>
+        </div>
+        <div class="window debtor">
+            <form id="debtor-form">
+                <p class="window-text">Kime borcun var?</p>
+                <div class="roommates">
+                    <% roommates.forEach(mate=> { %>
+                        <span class="mate" data-id="<%= mate.id %>">
+                            <%= mate.name %>
+                        </span>
+                        <% }) %>
+                </div>
+                <p class="window-text">Borç miktarı:</p>
+                <div class="amount-wrapper">
+                    <input class="amount" type="number" name="amount" step="0.01" id="amount" min="0.1" max="999999999">
+                    <span class="currency">₺</span>
+                </div>
+                <button class="submit" type="submit">
+                    <span class="material-symbols-rounded" style="font-size: 2rem;">
+                        add_task
+                    </span>
+                    Borcu ekle
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

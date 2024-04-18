@@ -1,0 +1,20 @@
+{
+    "theme_color": "#1463b8",
+    "background_color": "#0a0a0a",
+    "icons": [
+        {
+            "purpose": "any",
+            "sizes": "512x512",
+            "src": "icon512_rounded.png",
+            "type": "image/png"
+        }
+    ],
+    "orientation": "portrait",
+    "display": "standalone",
+    "dir": "auto",
+    "lang": "tr-TR",
+    "name": "KYK 502 Borç Yönetim Sistemi",
+    "short_name": "KYK 502 BYS",
+    "start_url": "/",
+    "scope": "/"
+}
