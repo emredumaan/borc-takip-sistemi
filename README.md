@@ -6,11 +6,11 @@ Arkadaş grubunuzla birbirinize olan borçlarınızı takip etmek için gelişti
 
 - Mobil cihazlar için tasarlanmış bir arayüze sahiptir.
 - Progressive Web App (PWA) olarak cihaza indirilebilir.
-- Kayıt olmak için özel bir menü bulunmamaktadır. Kayıtlı kullanıcılar, server tarafından bir script yardımıyla eklenir. Kullanıcılar, uygulama arayüzünden giriş yaparak sisteme erişebilirler.
-- Sisteme kayıtlı kullanıcılara alacak veya verecekleri borçları ekleyebilirler.
-- Kullanıcıya göre alacak veya verecek borçları, filtreleme seçeneği ile birlikte görüntüleyebilirler.
-- Başka birisinden alacak borç eklemeye veya verecek borcunuzu silmeye çalıştığınızda, işlem doğrudan gerçekleşmez. Karşı taraftaki kullanıcının onaylaması gerekir.
-- Hesaba bir kere giriş yaptıktan sonra, server tarafından hesap oluşturulurken girilen şifreyi değiştirebilirler.
+- Front-end üzerinden yeni kullanıcılar uygulamaya kaydolamazlar. Kayıtlı kullanıcılar, server tarafından bir script yardımıyla eklenir. Kullanıcılar, uygulama arayüzünden giriş yaparak sisteme erişebilirler.
+- Sisteme kayıtlı kullanıcılara alacak veya verecek borçları eklenebilir.
+- Alacak veya verecek borçları, kullanıcıya göre filtreleme seçeneği ile birlikte görüntülenebilir.
+- Başka birisinden alacak borç eklemeye veya verecek borcunuzu silmeye çalıştığınızda, işlem doğrudan gerçekleşmez. Karşı kullanıcının onaylaması gerekir.
+- Hesaba bir kere giriş yapıldıktan sonra, server tarafından hesap oluşturulurken girilen şifre değiştirilebilir.
 
 ## Kullanılan Teknolojiler
 
